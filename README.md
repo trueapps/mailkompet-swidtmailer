@@ -52,9 +52,9 @@ $mailer->send($message); // Exception is throw when response !== 200
 You can set default headers at Transport-level, to be set on every message, unless overwritten.
 
 ```php
-$defaultHeaders = ['X-PM-Tag' => 'my-tag'];
+$defaultHeaders = ['X-MK-Tag' => 'my-tag'];
 
-$transport = new \Postmark\Transport('<SERVER_TOKEN>', $defaultHeaders);
+$transport = new \MailKomplet\Transport('<BASE_CRYPT>','<APIKEY>', $defaultHeaders);
 
 $message = new Swift_Message('Hello from MailKomplet!');
 
@@ -64,4 +64,4 @@ $message->getHeaders()->addTextHeader('X-MK-Tag', 'custom-tag');
 
 ##### Notes:
 
-- The Transport uses the [MailKomplet API](https://api.mail-komplet.cz) internally to send mail, via the [/transactionalEmails endpoint].
+- The Transport uses the [MailKomplet API](https://api.mail-komplet.cz) internally to send mail, via the /transactionalEmails endpoint.
