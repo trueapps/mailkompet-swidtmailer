@@ -1,0 +1,34 @@
+{
+    "name": "trueapps/mailkomplet-swiftmailer",
+    "description": "Swift Transport implementation for mail-komplet.cz API.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomas Hnilica",
+            "email": "tomas@trueapps.cz"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "swiftmailer/swiftmailer": "^6.0",
+        "guzzlehttp/guzzle": "^6.4"        
+    },
+    "require-dev": {
+			"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Trueapps\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "src/",
+            "tests/"
+        ]
+    },    
+    "scripts" : {
+      "test" : "phpunit"  
+    }
+}
