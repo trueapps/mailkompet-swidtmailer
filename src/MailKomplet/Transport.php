@@ -225,14 +225,10 @@ class Transport implements Swift_Transport {
         
         $payload['to'] = $to;
 
-        /*not available in MK?*/
-        /*
         $msgReplyTo = $message->getReplyTo();
         foreach($msgReplyTo as $k=>$v) {
-            $payload['fromAddress'] = $k;
+            $payload['replyTo'] = $k;
         }
-         * 
-         */
 	}
 
 	/**
