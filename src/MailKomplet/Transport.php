@@ -226,8 +226,10 @@ class Transport implements Swift_Transport {
         $payload['to'] = $to;
 
         $msgReplyTo = $message->getReplyTo();
-        foreach($msgReplyTo as $k=>$v) {
-            $payload['replyTo'] = $k;
+        if (is_array($msgReplyTo)) {         
+            foreach($msgReplyTo as $k=>$v) {
+                $payload['replyTo'] = $k;
+            }
         }
 	}
 
